@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/mnt/c/Users/karlo/OneDrive/Escritorio/Carlos Mario/Servicios web/Django1/venv/bin/python" "$0" "$@"
+'''exec' "/mnt/c/Users/karlo/OneDrive/Escritorio/Carlos Mario/Servicios web/Django1/venv/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

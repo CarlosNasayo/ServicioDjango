@@ -90,9 +90,19 @@ WSGI_APPLICATION = 'vacunacionCovid19.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'test': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'default':{
+        'ENGINE': 'djongo',
+        "CLIENT": {
+           "name": 'Vacunacion',
+           "host": 'mongodb+srv://Carlosn97:Carlosnasayo28@cluster0.nee6y.mongodb.net/Vacunacion?retryWrites=true&w=majority',
+           "username": 'Carlosn97',
+           "password": 'Carlosnasayo28',
+           "authMechanism": "SCRAM-SHA-1",
+        }, 
     }
 }
 

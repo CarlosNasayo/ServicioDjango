@@ -7,6 +7,8 @@ class Persona(models.Model): # class persona extends models.Model
     apellido= models.CharField(max_length=100,blank= False,null=False)
     vacunado=models.BooleanField(default=False)
     fecha_nacimiento= models.DateField()
+    def __str__(self):
+        return '%s,  %s' % (self.nombre, self.apellido)
 
 
 
@@ -15,7 +17,8 @@ class Vacuna(models.Model):
     nombre= models.CharField(max_length=20)
     productor= models.CharField(max_length=40)
     cuantas_dosis= models.IntegerField()
-
+    def __str__(self):
+        return '%s,  %s' % (self.nombre, self.productor)
 class Vacunacion(models.Model):
     id_vacunacion=models.AutoField(primary_key=True)
     persona= models.ForeignKey(Persona,on_delete=models.CASCADE)
@@ -24,6 +27,9 @@ class Vacunacion(models.Model):
     fecha_vacunacion= models.DateField()
     dosis= models.IntegerField()
     lote_vacuna= models.CharField(max_length=10,blank=False,null=False)
+
+    def __str__(self):
+        return '%s,  %s' % (self.persona, self.vacuna)
     
 
 
